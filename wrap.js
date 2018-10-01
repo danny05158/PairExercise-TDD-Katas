@@ -10,10 +10,21 @@ const wrap = (str, num) => {
         result.push(subStr)
       }
       // it is not blank
+      else{
+        for(let l = i; l>0; l--){
+           let currentVal2 = str[l-1];
+           if(currentVal2 === " "){
+             let subStr = str.slice(i, i+l+1)
+             result.push(subStr);
+           }
+        }
+      }
     }
   }
   return result.join("\n")
 }
+
+debugger
 let r = wrap("hi there", 4)
 console.log(r)
 
