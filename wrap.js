@@ -29,7 +29,7 @@ const wrap = (str, num) => {
   //   console.log(str.slice(3, 3 + str.length - 1))
   while (indices.length > 1) {
     // console.log(str.slice(indices[0], indices[1]))
-    results.push(str.slice(indices[0], indices[1]))
+    results.push(str.slice(indices[0], indices[1]-1))
     indices.shift()
   }
   //   return indices
